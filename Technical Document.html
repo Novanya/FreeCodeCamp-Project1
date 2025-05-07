@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+  min-width: 290px;
+}
+
+#main-doc {
+  position: relative;
+  margin-left: 290px;
+  margin-top: 20px;
+}
+
+header {
+  display: inline;
+  color: black;
+  margin: 15px;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: left;
+  font-family: monospace;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 2.2rem;
+  padding-left: 20px;
+  display: block;
+  white-space: nowrap;
+}
+
+.green { color: #009900; }
+.blue { color: #0040ff; }
+.pink { color: #ff3399; }
+.red { color: red; }
+.turquoise { color: turquoise; }
+.orange { color: hsl(36, 100%, 50%); }
+.purple { color: rgb(163, 26, 255); }
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Chakra Petch, serif;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  color: #009900;
+}
+
+a#nav-css:hover,
+a#nav-css2:hover,
+a#nav-css3:hover,
+a#nav-css4:hover,
+a#nav-css5:hover,
+a#nav-css6:hover {
+  color: #0040ff;
+}
+
+#navbar ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 80%;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+#navbar li {
+  color: #000000;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+p {
+  margin-left: 15px;
+  font-family: Georgia;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #00cc00;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.css-code {
+  color: #0060ff;
+}
+
+dl {
+  padding-left: 20px;
+}
+
+li {
+  font-family: Georgia;
+}
+
+.form-list {
+  margin: 5px 10px;
+}
+
+.credit {
+  font-size: 0.8rem;
+  text-align: right;
+  color: rgba(168, 168, 168, 0.9);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 815px) {
+  #navbar ul {
+    height: 207px;
+    border-top: 1px solid;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+  #navbar {
+    height: 100%;
+    position: static;
+    width: 50%;
+    min-width: 50%;
+  }
+} </style>
+</head>
+<body>
+  <nav id="navbar">
+    <header><h1>HTML, CSS & JavaScript</h1></header>
+    <ul>
+      <li><a class="nav-link" href="#What_is_HTML">What is HTML</a></li>
+      <li><a class="nav-link" href="#HTML_Syntax">HTML Syntax</a></li>
+      <li><a class="nav-link" href="#HTML_Tags">HTML Tags</a></li>
+      <li><a class="nav-link" href="#HTML_Lists">HTML Lists</a></li>
+      <li><a class="nav-link" href="#What_is_CSS">What is CSS</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="What_is_HTML">
+      <header><h2>What is HTML</h2></header>
+      <article>
+        <p>HTML stands for Hyper Text Markup Language.</p>
+        <p>HTML is the standard markup language for creating Web pages.</p>
+        <p>HTML describes the structure of a Web page.</p>
+        <p>HTML consists of a series of elements.</p>
+        <p>HTML elements tell the browser how to display the content.</p>
+        <code>&lt;!DOCTYPE html&gt;</code>
+        <code>&lt;html&gt;...&lt;/html&gt;</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="HTML_Syntax">
+      <header><h2>HTML Syntax</h2></header>
+      <article>
+        <p>HTML documents consist of nested HTML elements.</p>
+        <p>An element starts with a start tag and ends with an end tag.</p>
+        <p>The content is placed between the start and end tags.</p>
+        <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>
+        <code>&lt;h1&gt;This is a heading&lt;/h1&gt;</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="HTML_Tags">
+      <header><h2>HTML Tags</h2></header>
+      <article>
+        <p>HTML tags are used to define elements on the web page.</p>
+        <ul>
+          <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Headings</li>
+          <li><code>&lt;p&gt;</code>: Paragraph</li>
+          <li><code>&lt;a&gt;</code>: Anchor (link)</li>
+          <li><code>&lt;div&gt;</code>: Container</li>
+          <li><code>&lt;img&gt;</code>: Image</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="HTML_Lists">
+      <header><h2>HTML Lists</h2></header>
+      <article>
+        <p>Lists are used to group related items together.</p>
+        <p>There are two types of lists: ordered and unordered.</p>
+        <ul>
+          <li><code>&lt;ul&gt;</code>: Unordered list</li>
+          <li><code>&lt;ol&gt;</code>: Ordered list</li>
+          <li><code>&lt;li&gt;</code>: List item</li>
+          <li>You can nest lists inside each other</li>
+          <li>Lists help organize content meaningfully</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="What_is_CSS">
+      <header><h2>What is CSS</h2></header>
+      <article>
+        <p>CSS stands for Cascading Style Sheets.</p>
+        <p>CSS describes how HTML elements are to be displayed on screen.</p>
+        <p>CSS saves a lot of work. It can control the layout of multiple web pages at once.</p>
+        <code>body { font-family: Arial; }</code>
+        <code>h1 { color: blue; }</code>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
