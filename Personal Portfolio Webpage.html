@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta 
+        name="viewport" 
+        content="width=device-width, inital-scale=1.0" 
+      />
+      <title>Personal Portfolio</title>
+      <link rel="stylesheet" href="styles.css" />
+      <style>:root {
+        --main-color1: #190061;
+        --main-color2: #240090;
+        --main-color3: #3500d3;
+        --header-color1: #0c0032;
+        --header-color2: #282828;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      @media (max-width: 700px) {
+        html {
+          font-size: 12.5px;
+        }
+        .my {
+          font-size: 0;
+        }
+        .work-caption {
+          font-size: 1.25em;
+        }
+        .footer-logo {
+          width: 15px;
+        }
+      }
+      
+      @media (min-width: 700px) {
+        html {
+          font-size: 15px;
+        }
+        .footer-logo {
+          width: 25px;
+        }
+      }
+      
+      html {
+        box-sizing: border-box;
+        font-family: Helvetica, sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      header {
+        background-color: var(--header-color1);
+        border-bottom: 5px solid var(--header-color2);
+        width: 100%;
+        height: 22px;
+        padding: 17px 0 15px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+      }
+      
+      #navbar, #navbar > ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      #navbar > ul > li {
+        font-size: 1.25em;
+        display: block;
+        padding: 0 20px 0 20px;
+        color: ghostwhite;
+      }
+      
+      a {
+        text-decoration: none;
+        color: ghostwhite;
+      }
+      
+      li:hover {
+        background-color: var(--main-color3);
+        cursor: pointer;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      main {
+        position: relative;
+      }
+      
+      #welcome-section {
+        background-color: var(--main-color1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .border-big {
+        margin: 0 auto;
+        border: 1px solid ghostwhite;
+        width: 65vw;
+      }
+      
+      .border-small {
+        margin: 0 auto;
+        border: 1px solid ghostwhite;
+        width: 45vw;
+      }
+      
+      .border-huge {
+        margin: 0 auto;
+        border: 3px solid var(--header-color2);
+        width: 100%;
+      }
+      
+      .welcome-text {
+        text-align: center;
+        color: ghostwhite;
+      }
+      
+      .main-title {
+        font-size: 4.5em;
+        font-weight: bold;
+      }
+      
+      .main-caption {
+        font-size: 1.2em;
+        font-style: italic;
+      }
+      
+      #projects {
+        background-color: var(--main-color2);
+      }
+      
+      .projects-title, .dream-title {
+        text-align: center;
+        font-size: 2.25em;
+        color: ghostwhite;
+        padding: 65px 0 10px 0;
+      }
+      
+      .work-grid {
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+      
+      .project-tile {
+        background-color: var(--header-color1);
+        border: 4px solid var(--header-color2);
+      }
+      
+      .project-tile:hover {
+        transform: scale(0.98);
+        border: 4px solid var(--main-color3);
+        cursor: pointer;
+      }
+      
+      .work-img {
+        border-bottom: 4px solid var(--header-color2);
+      }
+      
+      @media (min-width: 1100px) {
+        .work-img {
+          width: 500px;
+        }
+        .project-tile {
+          width: 500px;
+        }
+        .work-caption {
+          font-size: 1.25em;
+        }
+      }
+      
+      @media (max-width: 1100px) {
+        .work-img {
+          width: 330px;
+        }
+        .project-tile {
+          width: 330px;
+        }
+      }
+      
+      .work-caption {
+        color: ghostwhite;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      #dream-contact {
+        background-color: var(--main-color3);
+        height: 90vh;
+      }
+      
+      .dream-caption {
+        text-align: center;
+        font-size: 1.1em;
+        margin: auto;
+        padding: 40px;
+        width: 60%;
+        color: ghostwhite;
+      }
+      
+      .contacts {
+        text-align: center;
+        padding: 5px 0 0 0;
+      }
+      
+      .contact-logo {
+        position: relative;
+        padding: 0 20px 10px 20px;
+      }
+      
+      .contact-logo:hover {
+        transform: scale(1.1);
+      }
+      
+      @media (max-width: 860px) {
+        .contact-logo {
+          width: 200px;
+        }
+        #freeCodeCamp-logo {
+          top: 15px;
+        }
+      }
+      
+      @media (min-width: 860px) {
+        .contact-logo {
+          width: 380px;
+        }
+        #freeCodeCamp-logo {
+          top: 30px;
+        }
+      }
+      
+      i {
+        color: ghostwhite;
+        font-size: 0.8em;
+      }
+      
+      footer {
+        background-color: var(--header-color1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+      
+      .footer-title {
+        text-align: center;
+        color: ghostwhite;
+        width: 50%;
+        font-size: 0.9em;
+      }</style>
+    </head>
+    <body>
+      <header>
+        <nav id="navbar">
+          <ul>
+            <li><a href="#welcome-section"><span class="my">My </span>Vision</a></li>
+            <li><a href="#projects"><span class="my">My </span>Work</a></li>
+            <li><a href="#dream-contact"><span class="my">My </span>Dream</a></li>
+            <li id="blank"></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-page">
+        <section id="welcome-section">
+          <div class="welcome-container">
+            <div class="welcome-text">
+              <h1 class="main-title">I'm Xander</h1>
+              <p class="main-caption">An aspiring programmer.</p>
+            </div>
+          </div>
+        </section>
+        <section id="projects">
+          <h1 class="projects-title">My work as a beginner.</h1>
+          <div class="border-big"></div>
+          <section class="work-grid">
+            <a 
+              id="profile-link" 
+              href="https://codepen.io/big_codeguy/pen/mdQMxKZ"
+              target="_blank"
+            >
+              <div class="project-tile">
+                <img 
+                  id="newcomer-survey-form"
+                  class="work-img"
+                  src="https://shots.codepen.io/username/pen/mdQMxKZ-512.jpg?version=1689538744"
+                  alt="Preview of Newcomer Survey Form"
+                  loading="lazy" 
+                />
+                <p class="work-caption">Newcomer Survey Form</p>
+              </div>
+            </a>
+            <a 
+              id="profile-link" 
+              href="https://codepen.io/big_codeguy/pen/RwqMQRO"
+              target="_blank"
+            >
+              <div class="project-tile">
+                <img 
+                  id="tribute-page"
+                  class="work-img"
+                  src="https://shots.codepen.io/username/pen/RwqMQRO-512.jpg?version=1689538871"
+                  alt="Preview of Frank Herbert Tribute Page"
+                  loading="lazy" 
+                />
+                <p class="work-caption">Frank Herbert Tribute Page</p>
+              </div>
+            </a>
+            <a 
+              id="profile-link" 
+              href="https://codepen.io/big_codeguy/pen/gOQQBBG"
+              target="_blank"
+            >
+              <div class="project-tile">
+                <img 
+                  id="technical-document"
+                  class="work-img"
+                  src="https://shots.codepen.io/username/pen/gOQQBBG-512.jpg?version=1690678983"
+                  alt="Preview of HTML Technical Document"
+                  loading="lazy" 
+                />
+                <p class="work-caption">HTML Technical Document</p>
+              </div>
+            </a>
+            <a 
+              id="profile-link" 
+              href="https://codepen.io/big_codeguy/pen/GRwaymM"
+              target="_blank"
+            >
+              <div class="project-tile">
+                <img 
+                  id="product-landing-page"
+                  class="work-img"
+                  src="https://shots.codepen.io/username/pen/GRwaymM-512.jpg?version=1691600956"
+                  alt="Preview of Dark Souls Trilogy Product Landing Page"
+                  loading="lazy" 
+                />
+                <p class="work-caption">Dark Souls Trilogy Product Landing Page</p>
+              </div>
+            </a>
+          </section>
+        </section>
+        <section id="dream-contact">
+          <h1 class="dream-title">My Dream</h1>
+          <div class="border-small"></div>
+          <p class="dream-caption">I one day want to become a game developer, so I can express my ideas and art with the world. I've always loved making things, and I look up to many games and developers. I first need to keep practicing different languages of programming, then I'm going to keep trying to work towards this goal. <i>Please note these are really just placeholder contacts, as I am just starting out and don't have contacts I wish to make public as of now.</i></p>
+          <div class="contacts">
+            <a href="https://www.freecodecamp.org/Big_CodeGuy" target="_blank">
+              <img 
+                id="freeCodeCamp-logo"
+                class="contact-logo"
+                src="https://d33wubrfki0l68.cloudfront.net/78278bdf3a25d3e5558190b140cca9cbe86471e8/05e51/img/misuse-6.png"
+                alt="freeCodeCamp logo"
+                loading="lazy" 
+              />
+            </a>
+            <a href="https://codepen.io/big_codeguy" target="_blank">
+              <img 
+                id="codepen-logo"
+                class="contact-logo"
+                src="https://res.cloudinary.com/css-tricks/images/f_auto,q_auto/v1642454945/codepen-wordmark-display-inside-white@10x_163987fcdd/codepen-wordmark-display-inside-white@10x_163987fcdd.png?_i=AA"
+                alt="CODEPEN logo"
+                loading="lazy" 
+              />
+            </a>
+          </div>
+        </section>
+        <div class="border-huge"></div>
+        <footer>
+          <h1 class="footer-title">© Created for freeCodeCamp </h1>
+        </footer>
+      </main>
+    </body>
+  </html>
